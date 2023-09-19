@@ -1,9 +1,8 @@
 import { CookieOptions, CookieValues } from './types';
 
-function getKeys(obj: any) {
+function getKeys(obj: Record<string, any>) {
   const names = [];
-  let name = '';
-  for (name in obj) {
+  for (let name in obj) {
     names.push(name);
   }
   return names;
@@ -27,8 +26,11 @@ function toArray(value: any) {
   return Array.prototype.slice.call(value);
 }
 
-export function all(): Record<string, string> {
-  if (document.cookie === '') return {};
+export function all(cookie?: string): Record<string, string> {
+  const cookieStr = cookie || document.cookie;
+
+  if (!cookieStr) return {};
+
   const cookies: any = document.cookie.split('; '),
     result: any = {};
   for (let i = 0, l = cookies.length; i < l; i++) {

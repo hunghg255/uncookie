@@ -57,7 +57,7 @@ interface CookieValuesObj {
 }
 type CookieValues = string | CookieValuesObj;
 
-declare function all(): Record<string, string>;
+declare function all(cookie?: string): Record<string, string>;
 declare function get(name: string): string | false;
 declare function set(name: CookieValues, value: CookieValues, options?: CookieOptions): void;
 declare function remove(names: string | string[]): string | string[];

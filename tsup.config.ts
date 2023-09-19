@@ -8,7 +8,4 @@ export default defineConfig({
   format: ['cjs', 'esm', 'iife'],
   dts: true,
   minify: 'terser',
-  minifySyntax: true,
-  minifyIdentifiers: true,
-  minifyWhitespace: true,
 })
