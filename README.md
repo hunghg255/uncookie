@@ -1,6 +1,6 @@
 # uncookie - Javascript cookie
 
-:cookie: A simple, lightweight JavaScript API for handling browser cookies, it is easy to pick up and use, has a reasonable footprint (~1.8kb) (gzipped: 899b), and has no dependencies. It should not interfere with any JavaScript libraries or frameworks.
+:cookie: A simple, lightweight JavaScript API for handling browser cookies, it is easy to pick up and use, has a reasonable footprint (~1.4kb) (gzipped: 0.78kb), and has no dependencies. It should not interfere with any JavaScript libraries or frameworks.
 
 **Features:**
 
@@ -14,7 +14,7 @@
 
 🔥 Tree-shakable
 
-💥 [index.min.js](https://github.com/hunghg255/uncookie/tree/master/dist/index.min.js) 1kb(gzipped: 888b)
+💥 [index.min.js](https://unpkg.com/uncookie@1.0.0/dist/index.min.js) 1.4kb(gzipped: 0.78kb)
 
 
 ## Installation
