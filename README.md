@@ -12,6 +12,8 @@
 
 📦 Supports AMD/CommonJS
 
+🔥 Tree-shakable
+
 💥 [index.min.js](https://github.com/hunghg255/uncookie/tree/master/dist/index.min.js) 1kb(gzipped: 888b)
 
 
@@ -58,6 +60,7 @@ interface CookieValuesObj {
 type CookieValues = string | CookieValuesObj;
 
 declare function all(cookie?: string): Record<string, string>;
+
 declare function get(name: string): string | false;
 declare function set(name: CookieValues, value: CookieValues, options?: CookieOptions): void;
 declare function remove(names: string | string[]): string | string[];

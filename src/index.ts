@@ -1,5 +1,9 @@
 import { CookieOptions, CookieValues } from './types';
 
+function isSSR() {
+  return typeof window !== 'undefined';
+}
+
 function getKeys(obj: Record<string, any>) {
   const names = [];
   for (let name in obj) {
@@ -27,12 +31,17 @@ function toArray(value: any) {
 }
 
 export function all(cookie?: string): Record<string, string> {
-  const cookieStr = cookie || document.cookie;
+  let cookieStr = cookie;
+
+  if (!isSSR()) {
+    cookieStr = cookie || document.cookie;
+  }
 
   if (!cookieStr) return {};
 
-  const cookies: any = document.cookie.split('; '),
+  const cookies: any = cookieStr.split('; '),
     result: any = {};
+
   for (let i = 0, l = cookies.length; i < l; i++) {
     const item = cookies[i].split('=');
     result[decodeURI(item[0])] = decodeURI(item[1]);
@@ -98,7 +107,7 @@ export function clear(name?: string | string[]) {
   return name ? remove(name) : remove(getKeys(all()));
 };
 
-if (typeof window !== 'undefined') {
+if (isSSR()) {
   // @ts-ignore
   window.cookie = {
     all,
