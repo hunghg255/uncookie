@@ -5,9 +5,13 @@
 **Features:**
 
 🚀 Has no dependencies
+
 🌱 Works in all browsers
+
 🍁 Support TypeScript, including [d.ts]
+
 📦 Supports AMD/CommonJS
+
 💥 [index.min.js](https://github.com/hunghg255/uncookie/tree/master/dist/index.min.js) 1kb(gzipped: 888b)
 
 
