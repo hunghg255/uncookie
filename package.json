@@ -1,6 +1,6 @@
 {
   "name": "uncookie",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple, lightweight JavaScript API for handling browser cookies",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
